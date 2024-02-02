@@ -80,5 +80,19 @@ nx.draw(
     arrowsize=30,
 )
 
+
+num_nodes = G.number_of_nodes()
+
+
+num_edges = G.number_of_edges()
+
+
+node_degrees = dict(G.degree())
+
+print(f"Кількість вершин: {num_nodes}")
+print(f"Кількість ребер: {num_edges}")
+print("Ступінь кожної вершини:")
+for node, degree in node_degrees.items():
+    print(f"Вершина {node}: {degree}")
 nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
 plt.show()
